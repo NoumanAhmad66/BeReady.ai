@@ -1,0 +1,48 @@
+.hero-section {
+  padding: 10.875rem 0 8.375rem;
+}
+.banner-content h1 span {
+  background-image: linear-gradient(142deg, #0068ec 21.8%, #00bbf9 73.22%);
+  background-clip: text;
+  color: transparent; /* Ensures text is transparent for the gradient to show */
+}
+p {
+  margin: 0px 50px !important;
+  text-align: center !important;
+}
+.Row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap:1rem;
+}
+
+.hero-section-img1 {
+  width: 84px;
+  height: 54px;
+  background-color: #ffee00;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+.hero-section-img2 {
+  width: 90px;
+  height: 54px;
+  background-image: linear-gradient(142deg, #0068ec 21.8%, #00bbf9 73.22%);
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: absolute;
+  top:34rem;
+  right: 0;
+  transform: rotate(180deg);
+}
+@media only screen and (min-width: 992px) and (max-width:1296px){
+  .img-style{
+    height: 17rem !important;
+    width: 30rem !important;
+    margin-top: 2rem !important;
+  }
+}

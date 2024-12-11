@@ -1,0 +1,103 @@
+ul{
+	list-style: none;
+    padding: 0px !important;
+}
+.footer-back{
+	background-image:linear-gradient(142deg,#0073ff15 21.8%,#2bbdee57 73.22%);
+}
+.footer{
+	
+    padding: 6rem 0 4rem;
+}
+.logo-footer{
+	width: 35px !important;
+  height: 40px !important;
+}
+.footer-col h4{
+	margin-bottom: 35px;
+	position: relative;
+}
+.title-footer{
+	color: var(--black-color) !important;
+	font-family: var(--secondry-font) !important ;
+	text-transform: capitalize ;
+	font-size: 14px !important ;
+	font-weight: 800 !important;
+	margin-top: 0.3rem !important;
+	margin-bottom: 35px !important;
+}
+.desc{
+	display: block;
+	font-size: 0.8rem !important;
+    font-family: var(--primary-font)!important;
+	text-transform: capitalize;
+	color:var(--black-color) !important;
+	line-height: 1.6rem !important;
+	letter-spacing: 1px !important;
+	padding-top: 0.9rem;
+	padding-right: 4rem;
+	padding-left: 0.5rem;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #0068ec;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 0.875rem !important;
+    font-family: var(--primary-font)!important;
+	text-transform: capitalize;
+	color:var(--black-color) !important;
+	text-decoration: none;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.social-links{
+    display: flex !important;
+    gap:1rem;
+}
+.footer-col .social-links a{
+	display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    border: 1px solid #CBD5E1;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color:rgb(255, 255, 255);
+	background-image:linear-gradient(142deg,#0068ec 21.8%,#00bbf9 73.22%)!important;
+}
+.icon-style{
+    width: 20px;
+    height: 20px;
+    color:rgb(0, 0, 0);
+}
+.icon-style:hover{
+    color:rgb(255, 255, 255);
+}
+.border-line{
+    border: 1px solid #0068ec;;
+}
+
+/*responsive*/
+@media(max-width: 992px){
+
+}
+@media(max-width: 574px){
+
+}

@@ -1,0 +1,71 @@
+.left-banner {
+  width: 100%;
+  height: 100vh;
+  position: sticky; /* Keeps the image fixed in place */
+  top: 0; /* Sticks the image to the top of the viewport */
+  background-position: center; /* Centers the background image */
+  background-image: linear-gradient(142deg, #0066ecad 21.8%, #00bbf917 73.22%);
+  
+}
+
+.right-section {
+  padding: 5rem 0rem;
+}
+.main-heading {
+  font-size: 1.3rem !important;
+  margin-bottom: 10px !important;
+}
+.sub-heading {
+  text-align: center;
+  margin-bottom: 30px !important;
+}
+.main-heading span {
+  background-image: linear-gradient(142deg, #0068ec 21.8%, #00bbf9 73.22%);
+  background-clip: text;
+  color: transparent; /* Ensures text is transparent for the gradient to show */
+}
+.btn-1 {
+  width: 14rem;
+}
+
+.btn-2 {
+  width: 21rem;
+}
+.heading-role {
+  background-image: linear-gradient(
+    142deg,
+    #0068ec 21.8%,
+    #00bbf9 73.22%
+  ) !important;
+  background-clip: text !important;
+  color: transparent !important; /* Ensures text is transparent for the gradient to show */
+}
+.form-control {
+  height: 200px !important;
+}
+.bottom-btn-1 {
+  width: 12rem !important;
+}
+.back-button {
+  width: 6rem;
+  padding: 0.5rem 0.2rem !important;
+  line-height: 25px !important;
+  border: 0.1px solid #a09494ab !important;
+  text-transform: capitalize !important;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%) !important;
+  transition: all 0.4s ease-out 0s !important;
+  border-radius: 12px;
+  margin-left: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.back-button:hover{
+  background-image: linear-gradient(
+    142deg,
+    #00bbf9 21.8%,
+    #0068ec 73.22%
+  ) !important;
+}

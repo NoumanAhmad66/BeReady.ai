@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  white-space: revert;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  margin-top: 2px !important;
+  text-decoration: none;
+  font-family: var(--primary-font) !important;
+  color: var(--black-color) !important;
+  cursor: pointer;
+  font-size: 0.875rem !important;
+}
+
+a:hover {
+  color: var(--offwhite-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*===== Variable Define =====*/
+:root {
+  --primary-color: #a82c48;
+  --secondry-color: #43121d;
+  --third-color: #f98169;
+  --white-color: #fff;
+  --offwhite-color: #292222cc;
+  --text-color: #555;
+  --text-gray: #999;
+  --black-color: #000000;
+  --primary-font: "Roboto", sans-serif;
+  --secondry-font: "Quicksand", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
+h1 {
+  font-size: 2.9rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 0.9rem !important;
+  color: var(--black-color) !important;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-weight: 700 !important;
+  font-size: 2.25rem !important;
+  text-transform: capitalize !important;
+  font-family: var(--primary-font) !important;
+  color: var(--black-color) !important;
+  line-height: 3rem !important;
+}
+h3 {
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  text-transform: capitalize !important;
+  font-family: var(--primary-font) !important;
+  color: var(--black-color) !important;
+  line-height: 3rem !important;
+}
+
+h4 {
+  color: var(--black-color) !important;
+  font-family: var(--secondry-font) !important;
+  text-transform: capitalize !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  margin-top: 0.3rem !important;
+}
+
+h5 {
+  color: var(--black-color) !important;
+  text-transform: capitalize !important;
+  font-family: var(--secondry-font) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+p {
+  font-family: var(--secondry-font) !important;
+  font-size: 1rem !important;
+  color: var(--black-color) !important;
+  font-weight: 500 !important;
+  line-height: 1.7rem !important;
+  letter-spacing: 1px !important;
+}
+.logo {
+  width: 45px;
+  height: 50px;
+}
+.card-desc {
+  font-family: var(--secondry-font) !important;
+  font-size: 1rem !important;
+  color: var(--black-color) !important;
+  font-weight: 500 !important;
+  line-height: 1.75rem !important;
+  letter-spacing: 1px !important;
+  text-align: start !important;
+  margin: 10px 0px 24px 0px !important;
+}
+
+.main-btn {
+  width: 11rem;
+  padding: 0.7rem 0.555rem !important;
+  line-height: 25px !important;
+  background-image: linear-gradient(
+    142deg,
+    #0068ec 21.8%,
+    #00bbf9 73.22%
+  ) !important;
+  color: var(--white-color) !important;
+  border: 0.1px transparent !important;
+  font-size: 0.9375rem !important;
+  font-weight: 400 !important;
+  text-transform: capitalize !important;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%) !important;
+  transition: all 0.4s ease-out 0s !important;
+  border-radius: 12px !important;
+  text-align: center;
+}
+
+.white-btn {
+  width: 11rem;
+  padding: 0.7rem 0.555rem !important;
+  line-height: 25px !important;
+  border: 0.1px solid #a09494ab !important;
+  color: var(--black-color) !important;
+  font-size: 0.9375rem !important;
+  font-weight: 400 !important;
+  text-transform: capitalize !important;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%) !important;
+  transition: all 0.4s ease-out 0s !important;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.main-btn:hover {
+  background-image: linear-gradient(
+    142deg,
+    #00bbf9 21.8%,
+    #0068ec 73.22%
+  ) !important;
+  font-size: 0.9375rem !important;
+  color: var(--white-color) !important;
+}
+
+.white-btn:hover {
+  color: var(--white-color) !important;
+  font-size: 0.9375rem !important;
+  border: 0.1px transparent #0068ec !important;
+  /* background-color: #D1CCD5; */
+  background-image: linear-gradient(
+    142deg,
+    #0068ec 21.8%,
+    #00bbf9 73.22%
+  ) !important;
+}
+.hero-card {
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%) !important;
+}
+/*
+==========================================
+  Scrollbar design
+==========================================
+*/
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    #e0e0e0,
+    #f9f9f9
+  ); /* Gradient background */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    142deg,
+    #0068ec 21.8%,
+    #00bbf9 73.22%
+  ) !important; /* Gradient thumb */
+
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Inner shadow */
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    142deg,
+    #00bbf9 21.8%,
+    #0068ec 73.22%
+  ) !important; /* Darker gradient on hover */
+}
+
+/*
+==========================================
+  Media Queries
+==========================================
+*/
+@media only screen and (min-width: 200px) and (max-width: 424px) {
+  .right-panel {
+    margin-left: 0rem !important;
+  }
+  .left-placeholder {
+    margin-right: 0rem !important;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 575px) {
+  /* Hero section */
+  .hero-section {
+    padding: 5.875rem 0 4.375rem !important;
+  }
+  .banner-content h1,
+  .top-content h1 {
+    font-size: 1.4rem !important;
+    font-weight: 900 !important;
+  }
+  .banner-content p,
+  .top-content p {
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    margin: 0px 0px !important;
+  }
+  .hero-section-img1,
+  .hero-section-img2 {
+    display: none;
+  }
+  .logo {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .title {
+    font-size: 0.6rem !important;
+    margin: 0px !important;
+  }
+  .img-style {
+    display: none;
+  }
+  .white-btn,
+  .main-btn {
+    width: 9rem;
+    padding: 0.7rem 0.4rem !important;
+    font-size: 0.9375rem !important;
+    margin-left: 7px;
+  }
+  /* use case */
+  .use-case-div-sm {
+    padding: 0px !important;
+  }
+  h2 {
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0px !important;
+  }
+  .p-tag {
+    padding: 0px !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4rem !important;
+  }
+  /* Card */
+  .card-dec {
+    margin: 0px 0.5rem 0px 0rem !important;
+    text-align: start !important;
+    letter-spacing: 0px !important;
+    font-size: 0.8rem !important;
+    line-height: 1.5rem !important;
+  }
+  .card-title {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+  }
+  .sm-screen {
+    padding: 0px 5px 0px 20px !important;
+  }
+  /* Footer */
+  .footer-sm {
+    background-image: linear-gradient(
+      142deg,
+      #0073ff15 21.8%,
+      #2bbdee57 73.22%
+    ) !important;
+    padding: 30px 0px;
+  }
+  .footer-back {
+    background-image: none !important;
+  }
+  /* interview page */
+  .left-banner {
+    width: 100%;
+    height: auto !important;
+    background-size: cover;
+  }
+  .btn-2 {
+    width: 14rem !important ;
+  }
+
+  .right-section {
+    padding: 1rem 0rem !important;
+  }
+  /* interview screen */
+  .placeholder {
+    height: 21rem !important;
+    width: 25rem !important;
+  }
+  .right-panel {
+    height: 19rem !important;
+    width: 24rem !important;
+    margin-left: 0.5rem;
+  }
+  .back-button {
+    margin-left: 0rem !important;
+  }
+  .left-placeholder {
+    width: 24rem  !important;
+    height: 17rem !important;
+    margin-right: 0.5rem;
+  }
+  .icons h5{
+    font-size: 0.5rem !important;
+  }
+  .left-panel-icon{
+    width: 22px !important;
+    height: 20px !important;
+  }
+  .icon-panel {
+    width: 24px !important;
+    height: 24px !important;
+}
+  .right-panel-heading {
+    font-size: 12px !important;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 575px) and (max-width: 990px) {
+  .hero-section {
+    padding: 9.875rem 0 4.375rem !important;
+  }
+  .hero-section-img2 {
+    display: none;
+  }
+  .hero-section-img1 {
+    top: 160px !important;
+  }
+  .img-style {
+    display: none;
+  }
+  .card-dec {
+    margin: 0px 0.5rem 0px 0rem !important;
+    text-align: start !important;
+    letter-spacing: 0px !important;
+    font-size: 0.8rem !important;
+  }
+  .card-title {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+  }
+  /* use case */
+  h2 {
+    font-weight: 600 !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 0px !important;
+  }
+  .p-tag {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+  }
+  /* interview page */
+  .left-banner {
+    width: 100%;
+    height: auto !important;
+    background-size: cover;
+  }
+  .right-section {
+    padding: 2rem 0rem !important;
+  }
+  /* interview screen */
+  .placeholder {
+    height: 21rem !important;
+    width: 23rem !important;
+  }
+  .right-panel {
+    height: 19rem !important;
+    width: 22rem !important;
+  }
+  .back-button {
+    margin-left: 3rem !important;
+  }
+  .left-placeholder {
+    width: 30rem  !important;
+    height: 20rem !important;
+  }
+  .icons h5{
+    font-size: 0.5rem !important;
+  }
+  .left-panel-icon{
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .icon-panel {
+    width: 24px !important;
+    height: 24px !important;
+}
+  .right-panel-heading {
+    font-size: 12px !important;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 991px) and (max-width: 1024px) {
+  .title {
+    font-size: 0.7rem !important;
+    margin: 0px !important;
+  }
+  .logo {
+    width: 25px;
+    height: 25px;
+  }
+  .hero-section {
+    padding: 9.875rem 0 4.375rem !important;
+  }
+  .hero-section-img1 {
+    top: 160px !important;
+  }
+  .hero-section-img2 {
+    top: 28rem !important;
+  }
+  .card-dec {
+    margin: 0px 0.5rem 0px 0rem !important;
+    text-align: start !important;
+    letter-spacing: 0px !important;
+    font-size: 0.8rem !important;
+    line-height: 1.5rem !important;
+  }
+  .card-title {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+  }
+  .left-banner {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+  .right-panel-heading {
+    text-align: center;
+  }
+  .icons h5{
+    font-size: 0.7rem !important;
+  }
+  .left-panel-icon {
+    width: 24px !important;
+    height: 24px !important;
+}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  .card-dec {
+    margin: 0px 0.5rem 0px 0rem !important;
+    text-align: start !important;
+    letter-spacing: 0px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5rem !important;
+  }
+  .card-title {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+  }
+  .card-top-content {
+    height: 12rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1170px;
+  }
+}

@@ -1,0 +1,81 @@
+.bg-design{
+  background-image: linear-gradient(142deg, #0066ec00 21.8%, #00bbf917 73.22%);
+}
+.left-placeholder {
+    width: 35rem;
+    height: 25rem;
+    padding: 20px;
+    background-color: #131224 !important;
+    border-radius: 8px;
+    
+  }
+  .left-panel-icon{
+    width: 30px;
+    height: 30px;
+    filter: saturate(3);
+  }
+  .left-panel-icon:hover{
+    filter: saturate(1);
+    cursor: pointer;
+  }
+  .call-screen{
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  .interview-controls{
+    position: absolute;
+    top: 27rem;
+    display: flex;
+    justify-content:center;
+    gap: 2rem;
+    width: 100%;
+    top: 27rem;
+  }
+  .left-panel-icons{
+    width: 35px;
+    height: 35px;
+    filter: saturate(3);
+
+  }
+  .left-panel-icons:hover{
+    filter: saturate(1);
+    cursor: pointer;
+  }
+  .disabled{
+    opacity: 0.5;
+  }
+
+  .icons h5{
+    color: #ffffff !important;
+    margin-left: -16px ;
+    margin-bottom: 0px !important;
+  }
+  .right-panel{
+    width: 33rem;
+    height: 22rem;
+    border: 1px solid #0068ec;
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    
+  }
+  .right-panel-heading span{
+    background-image: linear-gradient(142deg, #0068ec 21.8%, #00bbf9 73.22%);
+    background-clip: text;
+    color: transparent; /* Ensures text is transparent for the gradient to show */
+  }
+  .icon-panel{
+    width: 30px;
+    height: 30px;
+  }
+.input-box{
+    height: 3rem !important;
+    max-width: 24rem !important;
+}
+
+.custom-popup {
+  background-color: #f4f4f4; /* Light gray background */
+  border: 1px solid #0068ec;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}

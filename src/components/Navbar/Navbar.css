@@ -1,0 +1,54 @@
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-menu li:hover {
+    background-color:rgba(0, 0, 0, 0.041) !important; /* Set your desired background color */
+}
+
+/* Ensure the a tag color remains unchanged on hover */
+.dropdown-menu li:hover .dropdown-item {
+    background-color: inherit !important; /* Inherit the li hover background color */
+    color: var(--black-color) !important;
+    
+}
+.navbar-nav {
+    gap: 3rem;      /* Set your desired spacing here */
+}
+
+.left-nav {
+    gap: 1.25rem !important;      /* Set your desired spacing here */
+}
+.title{
+    text-decoration: none;
+    font-family: var(--primary-font)!important;
+    color: var(--black-color) !important;
+    font-size: 0.875rem ;
+    margin: 0px 0px 0px 5px !important;
+}
+.title:hover {
+    font-family: var(--primary-font)!important;
+    cursor: pointer;
+    font-size: 0.875rem !important;
+    margin: 0px 0px 0px 5px !important;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px){
+    .navbar-nav {
+        gap: 1rem ;}
+    .main-btn {
+            width: 9rem;
+            padding: 0.4rem 0.5rem !important;
+        }
+    .white-btn {
+            width: 9rem;
+            padding: 0.4rem 0.5rem !important;
+        }
+    }
