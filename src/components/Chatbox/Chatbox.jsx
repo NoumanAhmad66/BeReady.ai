@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './ChatBox.css';
+import './Chatbox.css';
 import Swal from "sweetalert2";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Oval } from 'react-loader-spinner';
