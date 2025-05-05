@@ -18,10 +18,10 @@ function HeroSection({title , description ,image}) {
               
               </p>
               <div className="Row ">
-              <button type="button" class="main-btn">
+              <button type="button" className="main-btn">
                 Sechdule <span className=" text-lowercase">a</span> Demo
               </button>
-              <Link to="/Interview"><button  type="button" class="white-btn">
+              <Link to="/Interview"><button  type="button" className="white-btn">
                 Try AI Interview
               </button></Link>
               

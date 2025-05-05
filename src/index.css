@@ -203,6 +203,11 @@ p {
   border-radius: 20px;
   box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%) !important;
 }
+.icon{
+  width: 20px;
+  height: 20px;
+  color:#0068ec;
+}
 /*
 ==========================================
   Scrollbar design

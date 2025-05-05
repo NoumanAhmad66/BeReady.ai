@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import banner from "../../assets/Interview/interview4.png";
-import "./interview.css";
+import "./Interview.css";
 import "../../index.css";
 import roleData from "../../assets/Interview/interview-data.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

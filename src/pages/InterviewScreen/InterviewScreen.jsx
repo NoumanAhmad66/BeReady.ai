@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import ChatBox from "../../components/Chatbox/Chatbox";
 
 const InterviewScreen = () => {
+  const [userData, setUserData] = useState({}); // Add this line
   const [isInterviewStarted, setIsInterviewStarted] = useState();
   const [isCameraOn, setIsCameraOn] = useState(true); // Track camera state
   const [isMicOn, setIsMicOn] = useState(true); // Track microphone state
@@ -23,10 +24,10 @@ const InterviewScreen = () => {
 
     // Get form data
     const formData = new FormData(e.target);
-    const obj = Object.fromEntries(formData.entries());
+    const formObject = Object.fromEntries(formData.entries());
 
     // Validation: Check if fields are empty
-    if (!obj.Username && !obj.Email) {
+    if (!formObject.Username && !formObject.Email) {
       Swal.fire({
         icon: "error", // Error icon
         title: "Missing Fields",
@@ -40,7 +41,7 @@ const InterviewScreen = () => {
       return; // Stop the function if validation fails
     }
     // if user-name field is empty
-    else if (!obj.Username){
+    else if (!formObject.Username){
       Swal.fire({
         icon: "error", // Error icon
         title: "Missing Field",
@@ -53,7 +54,7 @@ const InterviewScreen = () => {
       return; // Stop the function if validation fails
     }
     // if user-email field is empty
-    else if (!obj.Email){
+    else if (!formObject.Email){
       Swal.fire({
         icon: "error", // Error icon
         title: "Missing Field",
@@ -77,9 +78,13 @@ const InterviewScreen = () => {
         }
       });
     }
+     // Store user data
+     setUserData({
+      name: formObject.Username,
+      email: formObject.Email
+    });
 
-    console.log(obj); // Log form data if validation passes
-
+   
     // Start the interview after form submission
     setIsInterviewStarted(true);
   };
@@ -91,33 +96,44 @@ const InterviewScreen = () => {
     }
   }, [isInterviewStarted]);
 
-  const startInterview = async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: true,
-        audio: true,
-      });
-      streamRef.current = stream; // Store the media stream for later use
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-        videoRef.current.play();
-      } else {
-        console.error("Video element not found.");
-      }
-    } catch (err) {
-      alert("Error accessing camera/microphone: " + err.message);
-    }
-  };
+  // Add media stream cleanup
+const stopInterview = () => {
+  if (streamRef.current) {
+    streamRef.current.getTracks().forEach(track => track.stop());
+    streamRef.current = null;
+  }
+  if (videoRef.current) {
+    videoRef.current.srcObject = null;
+  }
+  setIsInterviewStarted(false);
+  setIsCameraOn(true);
+  setIsMicOn(true);
+};
 
-  const stopInterview = () => {
-    if (videoRef.current && videoRef.current.srcObject) {
-      const tracks = videoRef.current.srcObject.getTracks();
-      tracks.forEach((track) => track.stop());
+// Add error boundary for media access
+const startInterview = async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: true
+    });
+    
+    streamRef.current = stream;
+    if (videoRef.current) {
+      videoRef.current.srcObject = stream;
+      videoRef.current.play().catch(error => {
+        console.error('Video play error:', error);
+      });
     }
-    setIsInterviewStarted(false);
-    setIsCameraOn(true);
-    setIsMicOn(true);
-  };
+  } catch (err) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Media Access Error',
+      text: 'Please enable camera and microphone permissions to continue',
+      footer: err.message
+    });
+  }
+};
   const toggleCamera = () => {
     if (streamRef.current) {
       const videoTrack = streamRef.current.getVideoTracks()[0]; // Get the video track
@@ -157,6 +173,7 @@ const InterviewScreen = () => {
                 ref={videoRef}
                 className="w-100 call-screen"
                 autoPlay
+                muted={true} 
               ></video>
               {/* mic or camera enable-disable */}
               <div className="interview-controls">
@@ -201,7 +218,7 @@ const InterviewScreen = () => {
                     </label>
                     <input
                       type="text"
-                      class="form-control input-box bg-success p-2 text-dark bg-opacity-10 border border-info"
+                      className="form-control input-box bg-success p-2 text-dark bg-opacity-10 border border-info"
                       placeholder="Username"
                       name="Username"
                     ></input>
@@ -212,7 +229,7 @@ const InterviewScreen = () => {
                     </label>
                     <input
                       type="email"
-                      class="form-control input-box bg-success p-2 text-dark bg-opacity-10 border border-info"
+                      className="form-control input-box bg-success p-2 text-dark bg-opacity-10 border border-info"
                       placeholder="Enter your email"
                       name="Email"
                     />
@@ -228,12 +245,12 @@ const InterviewScreen = () => {
               </div>
             </div>
           ) : (
-            <><ChatBox  micEnabled={isMicOn} /></>
+            <><ChatBox micEnabled={isMicOn} userEmail={userData.email} /></>
           )}
         </div>
       </div>
     </div>
   );
 };
-
+ 
 export default InterviewScreen;

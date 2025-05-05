@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav id="navbar" class="navbar navbar-expand-lg bg-white shadow-lg fixed-top align-items-lg-center top-0">
-      <div class="container-fluid py-lg-1 py-sm-1 py-1">
-        <a class="navbar-brand mx-0" href="#">
+    <nav id="navbar" className="navbar navbar-expand-lg bg-white shadow-lg fixed-top align-items-lg-center top-0">
+      <div className="container-fluid py-lg-1 py-sm-1 py-1">
+        <a className="navbar-brand mx-0" href="#">
           <img className="logo" src={logo} />
         </a>
         <a className="title">Software Productivity Strategists Inc.</a>
         <button
-          class="navbar-toggler me-2"
+          className="navbar-toggler me-2"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -20,27 +20,27 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav nav-content ms-auto mb-lg-0 align-items-lg-center">
-            <li class="nav-item">
-              <Link to="/" class="nav-link active">Home</Link>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav nav-content ms-auto mb-lg-0 align-items-lg-center">
+            <li className="nav-item">
+              <Link to="/" className="nav-link active">Home</Link>
             
             </li>
-            <li class="nav-item">
-              <Link to="/Solution" class="nav-link" >
+            <li className="nav-item">
+              <Link to="/Solution" className="nav-link" >
                 Solutions
               </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <Link to="/articles" className="nav-link">
                 Blog
-              </a>
+              </Link>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link "
+                className="nav-link "
                 href="#"
                 role="button"
                 aria-expanded="false"
@@ -49,15 +49,15 @@ const Navbar = () => {
               </a>
             
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
                 Contact Us
               </a>
             </li>
             
           </ul>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav left-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li className="nav-item">
               <a className="nav-link main-btn" href="#">

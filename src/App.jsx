@@ -9,6 +9,8 @@ import Solution from "./pages/Solutions/Solution.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Interview from "./pages/Interview/Interview.jsx";
 import InterviewScreen from "./pages/InterviewScreen/InterviewScreen.jsx";
+import Blog from "./pages/Blogs/Blog.jsx";
+import Blogdetail from "./pages/Blogs/Archive/Blogdetail.jsx";
 
 
 const DefaultLayout = ({ children }) => (
@@ -27,6 +29,8 @@ const App = () => (
     <Route path="/InterviewScreen" element={<InterviewLayout><InterviewScreen/></InterviewLayout>}/>
       <Route path="/" element={<DefaultLayout><Home /></DefaultLayout>} />
       <Route path="/Solution" element={<DefaultLayout><Solution /></DefaultLayout>} />
+      <Route path="/articles" element={<DefaultLayout><Blog/></DefaultLayout>} />
+      <Route path="article/:slug"  element={<DefaultLayout><Blogdetail/></DefaultLayout>} />
       <Route path="/Interview" element={<InterviewLayout><Interview /></InterviewLayout>} />
       
     </Routes>
